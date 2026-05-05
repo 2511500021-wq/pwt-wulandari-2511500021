@@ -42,6 +42,7 @@ if (isset($_GET['action'])) {
                         <th>jenkel</th>
                         <th>hp</th>
                         <th>id_kelas</th>
+                        <th>aksi</th>
                     </tr>
                 </thead>
 
@@ -49,7 +50,7 @@ if (isset($_GET['action'])) {
                     <?php
                     $no = 0;
                     $query = mysqli_query($koneksi, "SELECT siswa.nis, siswa.nm_siswa, siswa.jenkel, siswa.hp, kelas.nm_kelas FROM siswa join kelas on siswa.id_kelas = kelas.id_kelas");
-                    while ($result = mysqli_fetch_array($query)) {
+                     while ($result = mysqli_fetch_array($query)) {
                         $no++;
                     ?>
                         <tr>
