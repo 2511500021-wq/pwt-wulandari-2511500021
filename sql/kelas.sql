@@ -28,38 +28,25 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `kelas` (
-  `kd_kelas` int NOT NULL,
-  `nm_kelas` varchar(50) DEFAULT NULL
+  `id_kelas` int NOT NULL AUTO_INCREMENT,
+  `nm_kelas` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id_kelas`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `kelas`
 --
 
-INSERT INTO `kelas` (`kd_kelas`, `nm_kelas`) VALUES
-(3, 'pemograman web terstrtuktur'),
-(4, 'ipa'),
-(5, 'ips');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `kelas`
---
-ALTER TABLE `kelas`
-  ADD PRIMARY KEY (`kd_kelas`);
-
---
--- AUTO_INCREMENT for dumped tables
---
+INSERT INTO `kelas` (`id_kelas`, `nm_kelas`) VALUES
+(3, 'Pemrograman Web Terstruktur'),
+(4, 'IPA'),
+(5, 'IPS');
 
 --
 -- AUTO_INCREMENT for table `kelas`
 --
 ALTER TABLE `kelas`
-  MODIFY `kd_kelas` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_kelas` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
